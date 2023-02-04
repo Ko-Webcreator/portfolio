@@ -1,0 +1,17 @@
+@import '../env/index';
+
+.pc {
+  display: block !important;
+
+  @include mq(md) {
+    display: none !important;
+  }
+}
+
+.sp {
+  display: none !important;
+
+  @include mq(md) {
+    display: block !important;
+  }
+}
