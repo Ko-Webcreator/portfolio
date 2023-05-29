@@ -88,9 +88,9 @@ const IndexPage: NextPage = () => {
           <main className={mainStyles.wrap} ref={main}>
             <section className={mainStyles.section} ref={firstSectionRef}>
               <figure>
-                <CustomLink href="https://mercan.mercari.com/">
+                <div className={mainStyles.frameWrap}>
                   <NextImage className={mainStyles.frame} src="/mercan.png" />
-                </CustomLink>
+                </div>
                 <NextImage className={mainStyles.img} src="/mac.png" />
               </figure>
               <article id="first_article">
@@ -100,23 +100,19 @@ const IndexPage: NextPage = () => {
                   <span data-slot="NuxtJS, WordPress, GraphQL" />
                 </p>
                 <p>
-                  <b>製作期間 / 人数 :</b>
-                  <span data-slot="約4ヶ月 / 1人" />
-                </p>
-                <p>
                   <b>説明 :</b>
                   <span
                     data-slot="WordPress を Headless にして GraphQL にて API
-                を作成しました、ページ生成は NuxtJS の Static Site Generator を使用して実装しています。"
+                を作成し、ページ生成は NuxtJS の SSG を使用して実装しました"
                   />
                 </p>
               </article>
             </section>
             <section className={mainStyles.section} ref={secondSectionRef}>
               <figure>
-                <CustomLink href="https://yomcoma.com/user/">
+                <div className={mainStyles.frameWrap}>
                   <NextImage className={mainStyles.frame} src="/yomcoma_app.png" />
-                </CustomLink>
+                </div>
                 <NextImage className={mainStyles.img} src="/mac.png" />
               </figure>
               <article id="second_article">
@@ -126,65 +122,51 @@ const IndexPage: NextPage = () => {
                   <span data-slot="Flutter, Firebase(認証周り)" />
                 </p>
                 <p>
-                  <b>開発期間 / 人数 :</b>
-                  <span data-slot="約1年 / 3人" />
-                </p>
-                <p>
                   <b>説明 :</b>
-                  <span data-slot="プライベートで Flutter での開発を行ってた所、アプリ開発にアサインされました。フロントの設計から実装までを担当しました。" />
+                  <span data-slot="Flutterを使用したアプリ開発を行いました、フロントの設計から実装を行いました" />
                 </p>
               </article>
             </section>
             <section className={mainStyles.section} ref={thirdSectionRef}>
               <figure>
-                <CustomLink href="https://yomcoma.com/writer/">
+                <div className={mainStyles.frameWrap}>
                   <NextImage className={mainStyles.frame} src="/yomcoma_web.png" />
-                </CustomLink>
+                </div>
                 <NextImage className={mainStyles.img} src="/mac.png" />
               </figure>
               <article id="third_article">
                 <h2>Web開発</h2>
                 <p>
                   <b>使用技術 :</b>
-                  <span data-slot="NextJS, Firebase(認証周り), NestJS, MySQL, GCP" />
-                </p>
-                <p>
-                  <b>開発期間 / 人数 :</b>
-                  <span data-slot="約8ヶ月 / 3人" />
+                  <span data-slot="NextJS, Firebase(認証周り), NestJS, GCP" />
                 </p>
                 <p>
                   <b>説明 :</b>
-                  <span data-slot="アプリ開発後は Web の管理画面開発を行いました。NextJS を使用して実装してます。またバックエンドの実装も行いました。バックエンドは NestJS と MySQL でインフラ周りは GCP を使用しています。" />
+                  <span data-slot="NextJSを使用したWeb画面の開発を行いました、また一部バックエンドの実装と外部API(送金・決済)連携も行いました" />
                 </p>
               </article>
             </section>
             <section className={mainStyles.profile} ref={fourSectionRef}>
               <div className={mainStyles.icon}>
-                <NextImage className={mainStyles.img} src="/pic.png" />
+                <NextImage className={mainStyles.img} src="/me.jpg" />
               </div>
               <div className={mainStyles.pin} />
               <article>
                 <p className="notMove">
-                  ポートフォリオを見ていただきありがとうございます。
+                  ポートフォリオをご覧いただきありがとうございます。
                   <br />
-                  趣味で行ってたWeb制作を仕事で行いたく20代後半に上京しコーダーとして約7年間従事してきました。
+                  趣味が仕事になり、今ではWebやアプリ開発など幅広く携わってます。
                   <br />
-                  そしてFlutterを使用したアプリ開発を趣味で行ってた所、今いる会社にて制作からアプリ開発にアサインされました。
+                  モダン開発を得意としてスピーディーと正確な実装を得意とします。
                   <br />
-                  そのあとこちらも独学で学んでた React を使用した開発にもアサインされ
-                  Web開発も行いました。
+                  最近では新規サービスの立ち上げにも携わりました。
                   <br />
-                  また直近は NestJS を使用したバックエンド実装にも携わりました。
-                  <br />
-                  そうした中で今回地元に帰省するので転職活動を行うことになりました。
-                  <br />
-                  今まで学んできた事をアウトプットしつつ、今後はより開発を追求したいと思ってます。
-                  <br />
-                  ご検討よろしくお願いします。
+                  お客様のニーズに合わせてご提案可能なので、Webやアプリでお困りの事があれば
+                  お気軽にお問い合わせ下さい。
                 </p>
-                <CustomLink href="https://github.com/Ko-Webcreator/portfolio">
-                  <span>Source code is here ❤</span>
-                  <span>Thanks for watching My portfolio！</span>
+                <CustomLink href="https://forms.gle/aZ1zFmVpEz9euuXF7">
+                  <span>お問い合わせフォームに飛びます</span>
+                  <span>お問い合わせ</span>
                 </CustomLink>
               </article>
             </section>
