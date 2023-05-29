@@ -103,16 +103,47 @@ const IndexPage: NextPage = () => {
                   <b>説明 :</b>
                   <span data-slot="WordPressをHeadlessにしてGraphQLにてAPIを作成し、ページ生成はNuxtJSのSSGを使用して実装しました" />
                 </p>
+                <p>
+                  <b>URL :</b>
+                  <a href="https://mercan.mercari.com/" rel="noreferrer" target="_blank">
+                    <span data-slot="https://mercan.mercari.com/" />
+                  </a>
+                </p>
               </article>
             </section>
             <section className={mainStyles.section} ref={secondSectionRef}>
+              <figure>
+                <div className={mainStyles.frameWrap}>
+                  <NextImage className={mainStyles.frame} src="/yomcoma_web.png" />
+                </div>
+                <NextImage className={mainStyles.img} src="/mac.png" />
+              </figure>
+              <article id="second_article">
+                <h2>Web開発</h2>
+                <p>
+                  <b>使用技術 :</b>
+                  <span data-slot="NextJS, Firebase(認証周り), NestJS, GCP" />
+                </p>
+                <p>
+                  <b>説明 :</b>
+                  <span data-slot="NextJSを使用したWeb画面の開発を行いました、また一部バックエンドの実装と外部API(送金・決済)連携も行いました" />
+                </p>
+                <p>
+                  <b>URL :</b>
+                  <a href="https://yomcoma.com/writer/" rel="noreferrer" target="_blank">
+                    <span data-slot="https://yomcoma.com/writer/" />
+                  </a>
+                </p>
+              </article>
+            </section>
+            <section className={mainStyles.section} ref={thirdSectionRef}>
               <figure>
                 <div className={mainStyles.frameWrap}>
                   <NextImage className={mainStyles.frame} src="/yomcoma_app.png" />
                 </div>
                 <NextImage className={mainStyles.img} src="/mac.png" />
               </figure>
-              <article id="second_article">
+              <article id="third_article">
                 <h2>アプリ開発</h2>
                 <p>
                   <b>使用技術 :</b>
@@ -122,24 +153,11 @@ const IndexPage: NextPage = () => {
                   <b>説明 :</b>
                   <span data-slot="Flutterを使用したアプリ開発を行いました、フロントの設計から実装を行いました" />
                 </p>
-              </article>
-            </section>
-            <section className={mainStyles.section} ref={thirdSectionRef}>
-              <figure>
-                <div className={mainStyles.frameWrap}>
-                  <NextImage className={mainStyles.frame} src="/yomcoma_web.png" />
-                </div>
-                <NextImage className={mainStyles.img} src="/mac.png" />
-              </figure>
-              <article id="third_article">
-                <h2>Web開発</h2>
                 <p>
-                  <b>使用技術 :</b>
-                  <span data-slot="NextJS, Firebase(認証周り), NestJS, GCP" />
-                </p>
-                <p>
-                  <b>説明 :</b>
-                  <span data-slot="NextJSを使用したWeb画面の開発を行いました、また一部バックエンドの実装と外部API(送金・決済)連携も行いました" />
+                  <b>URL :</b>
+                  <a href="https://yomcoma.com/user/" rel="noreferrer" target="_blank">
+                    <span data-slot="https://yomcoma.com/user/" />
+                  </a>
                 </p>
               </article>
             </section>
