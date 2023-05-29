@@ -101,10 +101,7 @@ const IndexPage: NextPage = () => {
                 </p>
                 <p>
                   <b>説明 :</b>
-                  <span
-                    data-slot="WordPress を Headless にして GraphQL にて API
-                を作成し、ページ生成は NuxtJS の SSG を使用して実装しました"
-                  />
+                  <span data-slot="WordPressをHeadlessにしてGraphQLにてAPIを作成し、ページ生成はNuxtJSのSSGを使用して実装しました" />
                 </p>
               </article>
             </section>
