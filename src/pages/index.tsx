@@ -49,7 +49,7 @@ const IndexPage: NextPage = () => {
       const clientY = e.changedTouches[0].clientY;
       const diff = Math.abs(prevSpPageYRef.current - clientY);
 
-      if (diff < 250) {
+      if (diff < 200) {
         //小幅のスワイプは画面遷移させない
         return;
       }
