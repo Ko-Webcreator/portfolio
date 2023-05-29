@@ -47,6 +47,13 @@ const IndexPage: NextPage = () => {
 
     window.addEventListener('touchend', (e) => {
       const clientY = e.changedTouches[0].clientY;
+      const diff = Math.abs(prevSpPageYRef.current - clientY);
+
+      if (diff < 250) {
+        //小幅のスワイプは画面遷移させない
+        return;
+      }
+
       if (prevSpPageYRef.current < clientY) {
         onFirstController(-1);
       } else if (prevSpPageYRef.current > clientY) {
