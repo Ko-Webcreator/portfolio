@@ -61,7 +61,7 @@ const IndexPage: NextPage = () => {
 
   return (
     <>
-      <PageHead description="福岡に住む Ko Web Creator の Portfolio Site です。" />
+      <PageHead description="Ko Web Creator の Portfolio Site です。" />
       <div className={`${wholeStyles.wrap}`}>
         <div className={wholeStyles.childWrap}>
           <header className={headerStyles.title} ref={header}>
