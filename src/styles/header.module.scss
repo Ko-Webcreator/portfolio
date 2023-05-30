@@ -16,10 +16,13 @@
     color: var(--color-white);
     text-shadow: 2px 2px 3px rgb(255 255 255 / 25%);
     font-family: sans-serif;
-    font-size: 120px;
+    font-size: 100px;
+    line-height: 1.2;
     z-index: 10;
     position: relative;
     animation: neon 2s ease-in-out infinite alternate;
+    text-align: center;
+    font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
 
     @include mq(md) {
       font-size: get_vw(60);

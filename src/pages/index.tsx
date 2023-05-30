@@ -73,9 +73,9 @@ const IndexPage: NextPage = () => {
         <div className={wholeStyles.childWrap}>
           <header className={headerStyles.title} ref={header}>
             <h1>
-              Ko
+              WEB CREATOR
               <br />
-              Portfolio
+              KO
             </h1>
           </header>
           <section className={rectStyles.wrap} ref={section}>
