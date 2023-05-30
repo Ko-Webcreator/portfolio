@@ -25,7 +25,7 @@
     font-family: serif;
 
     @include mq(md) {
-      font-size: get_vw(60);
+      font-size: get_vw(40);
     }
   }
 }

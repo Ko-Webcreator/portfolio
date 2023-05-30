@@ -82,7 +82,7 @@
 
   @include mq(md) {
     width: get_vw(340);
-    height: get_vw(320);
+    height: get_vw(200);
   }
 
   &::before {
@@ -283,7 +283,7 @@
   }
   to {
     width: get_vw(340);
-    height: get_vw(320);
+    height: get_vw(200);
   }
 }
 
