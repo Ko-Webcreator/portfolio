@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import { Engine } from 'tsparticles-engine';
@@ -14,12 +14,14 @@ import wholeStyles from '@/styles/whole.module.scss';
 
 import type { NextPage } from 'next';
 import { CustomLink } from '@/components/common/CustomLink';
+import LockDialog from '@/components/LockDialog';
 // const AnimateCanvas = dynamic(() => import('@/components/AnimateCanvas'), {
 //   ssr: false,
 // });
 
 const IndexPage: NextPage = () => {
   const prevSpPageYRef = useRef(0);
+  const [isAllowScroll, setAllowScroll] = useState(false);
 
   const {
     arrow,
@@ -36,6 +38,8 @@ const IndexPage: NextPage = () => {
   } = useScrollController();
 
   useEffect(() => {
+    if (!isAllowScroll) return;
+
     window.addEventListener('wheel', (e) => {
       const deltaY = e.deltaY;
       onFirstController(deltaY);
@@ -60,11 +64,48 @@ const IndexPage: NextPage = () => {
         onFirstController(1);
       }
     });
-  }, [prevSpPageYRef, onFirstController]);
+  }, [isAllowScroll, prevSpPageYRef, onFirstController]);
 
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
+
+  if (!isAllowScroll) {
+    return (
+      <>
+        <PageHead description="Ko Web Creator の Portfolio Site です。" />
+        <LockDialog />
+        <div className={`${wholeStyles.wrap}`}>
+          <div className={wholeStyles.childWrap}>
+            <header className={headerStyles.title} ref={header}>
+              <h1>
+                WEB CREATOR
+                <br />
+                KO
+              </h1>
+            </header>
+            <section className={rectStyles.wrap} ref={section}>
+              <h2 className={rectStyles.leftFixed} data-text="Portfolio">
+                Portfolio
+              </h2>
+              <Particles className={rectStyles.particles} init={particlesInit} options={config} />
+              <div className={rectStyles.fukuoka}>
+                <NextImage className={rectStyles.img} src="/fukuoka.png" />
+              </div>
+              <div className={rectStyles.rect} ref={rect} />
+              <div className={rectStyles.arrow} ref={arrow}>
+                <div className={rectStyles.arrowInner} />
+              </div>
+            </section>
+            <div className={rectStyles.secondBlocks} ref={secondBlock} />
+            <p className={mainStyles.copyright} data-text="2023 Ko Portfolio">
+              &copy; 2023 Ko Portfolio
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>

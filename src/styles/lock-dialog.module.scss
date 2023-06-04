@@ -1,0 +1,59 @@
+@import './env/index';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+}
+
+.inputArea {
+  padding: 20px 0;
+  background: #fff;
+  @include mq(md) {
+    padding: get_vw(20) 0;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+
+    @include mq(md) {
+      font-size: get_vw(14);
+    }
+
+    & ~ p {
+      padding-top: 16px;
+
+      @include mq(md) {
+        padding-top: get_vw(16);
+      }
+    }
+  }
+
+  input {
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+
+    @include mq(md) {
+      height: get_vw(30);
+    }
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+
+    @include mq(md) {
+      font-size: get_vw(14);
+    }
+  }
+}
