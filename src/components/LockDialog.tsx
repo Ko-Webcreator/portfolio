@@ -11,7 +11,7 @@ const LockDialog = () => {
   return (
     <div className={styles.wrap}>
       <div className={styles.inputArea}>
-        <p>Portfolioを見るにはパスワードの入力が必要です</p>
+        <p>Portfolioを見るにはパスワードが必要です</p>
         <p>
           <input type="text" /> <input onClick={onConfirmPassword} type="button" value="入力" />
         </p>
