@@ -6,7 +6,7 @@ export default class Document extends NextDocument {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-
+          <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport" />
           {/* Favicons */}
           <link href="/favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
           <link href="/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
