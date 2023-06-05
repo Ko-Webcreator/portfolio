@@ -74,7 +74,7 @@ const IndexPage: NextPage = () => {
     return (
       <>
         <PageHead description="Ko Web Creator の Portfolio Site です。" />
-        <LockDialog />
+        <LockDialog setAllowScroll={setAllowScroll} />
         <div className={`${wholeStyles.wrap}`}>
           <div className={wholeStyles.childWrap}>
             <header className={headerStyles.title} ref={header}>
