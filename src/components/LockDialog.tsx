@@ -28,6 +28,7 @@ const LockDialog = ({ setAllowScroll }: Props) => {
       return;
     }
 
+    window.alert('ログインに成功しました\nスクロール/スワイプしてご覧頂けます');
     setAllowScroll(true);
   }, [passWordRef, setAllowScroll]);
 
